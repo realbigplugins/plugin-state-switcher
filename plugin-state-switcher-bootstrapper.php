@@ -54,23 +54,43 @@ class PluginSS_BootStrapper {
 			return;
 		}
 
+		switch ( apply_filters( 'pluginss_dependencies_version_mode', 'recommended' ) ) {
+
+			case 'minimum':
+
+				$php_min_version = '5.3.0';
+				$wp_min_version  = '3.5.0';
+
+				break;
+
+			case 'recommended':
+			default:
+
+				$php_min_version = '5.6.0';
+				$wp_min_version  = '4.6.0';
+
+				break;
+		}
+
 		$php_version = phpversion();
 		$wp_version  = get_bloginfo( 'version' );
 
 		// Minimum PHP version
-		if ( version_compare( $php_version, '5.6.0' ) === - 1 ) {
+		if ( version_compare( $php_version, $php_min_version ) === - 1 ) {
 
 			$this->notices[] = sprintf(
-				__( 'Minimum PHP version of 5.6.0 required. Current version is %s. Please contact your system administrator to upgrade PHP to its latest version.', 'pluginss' ),
+				__( 'Minimum PHP version of %s required. Current version is %s. Please contact your system administrator to upgrade PHP to its latest version.', 'pluginss' ),
+				$php_min_version,
 				$php_version
 			);
 		}
 
 		// Minimum WordPress version
-		if ( version_compare( $wp_version, '4.6.0' ) === - 1 ) {
+		if ( version_compare( $wp_version, $wp_min_version ) === - 1 ) {
 
 			$this->notices[] = sprintf(
-				__( 'Minimum WordPress version of 4.6.0 required. Current version is %s. Please contact your system administrator to upgrade WordPress to its latest version.', 'pluginss' ),
+				__( 'Minimum WordPress version of %s required. Current version is %s. Please contact your system administrator to upgrade WordPress to its latest version.', 'pluginss' ),
+				$wp_min_version,
 				$wp_version
 			);
 		}
