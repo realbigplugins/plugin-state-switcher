@@ -2,7 +2,7 @@
 /**
  * Database functions.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 
 defined( 'ABSPATH' ) || die;
@@ -12,14 +12,14 @@ defined( 'ABSPATH' ) || die;
  *
  * Database functions.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 class PluginSS_DB {
 
 	/**
 	 * Gets the plugin states table name.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @return string
 	 */
@@ -33,7 +33,7 @@ class PluginSS_DB {
 	/**
 	 * Gets a plugin state by ID.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @param int $ID ID of state.
 	 *
@@ -48,7 +48,7 @@ class PluginSS_DB {
 		/**
 		 * Filters the get_state results.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		$results = apply_filters( 'pluginss_get_state', $wpdb->get_row( "SELECT * FROM $state_table WHERE ID = $ID" ) );
 
@@ -61,7 +61,7 @@ class PluginSS_DB {
 	/**
 	 * Gets a plugin state by name.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @param string $name State name.
 	 *
@@ -76,14 +76,14 @@ class PluginSS_DB {
 		/**
 		 * Filters the state name before retrieving state.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		$name = apply_filters( 'pluginss_get_state_name', $name );
 
 		/**
 		 * Filters the get_state by name results.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		$results = apply_filters(
 			'pluginss_get_state_by_name',
@@ -96,7 +96,7 @@ class PluginSS_DB {
 	/**
 	 * Gets a plugin state by active plugins.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @param array $active Active plugins.
 	 *
@@ -111,14 +111,14 @@ class PluginSS_DB {
 		/**
 		 * Filters the currently active plugins before retrieving state.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		$active = apply_filters( 'pluginss_get_state_active', serialize( $active ) );
 
 		/**
 		 * Filters the get_state by active results.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		$results = apply_filters(
 			'pluginss_get_state_by_active',
@@ -131,7 +131,7 @@ class PluginSS_DB {
 	/**
 	 * Adds a plugin state.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @param string $name State name.
 	 * @param array|null $active_plugins Array of active plugins.
@@ -147,7 +147,7 @@ class PluginSS_DB {
 		/**
 		 * Filters new state to add.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		$active_plugins = apply_filters( 'pluginss_add_state', $active_plugins, $name );
 
@@ -184,7 +184,7 @@ class PluginSS_DB {
 	/**
 	 * Updates a plugin state.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @param int $ID State ID.
 	 * @param string $name State name.
@@ -201,7 +201,7 @@ class PluginSS_DB {
 		/**
 		 * Filters the state to update.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		$state = apply_filters( 'pluginss_update_state', array(
 			'name'   => $name,
@@ -218,7 +218,7 @@ class PluginSS_DB {
 	/**
 	 * Deletes a plugin state.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @param int $ID State ID.
 	 *
@@ -233,7 +233,7 @@ class PluginSS_DB {
 		/**
 		 * Allow short-ciruiting of deleting state.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		if ( apply_filters( 'pluginss_delete_state', false, $ID ) ) {
 
@@ -249,7 +249,7 @@ class PluginSS_DB {
 	/**
 	 * Retrieves all plugin states.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @return array|null|object|void
 	 */
@@ -262,7 +262,7 @@ class PluginSS_DB {
 		/**
 		 * Filters the get_states results.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		$results = apply_filters( 'pluginss_get_states', $wpdb->get_results( "SELECT * FROM $state_table" ) );
 
@@ -273,7 +273,7 @@ class PluginSS_DB {
 /**
  * Quick access to database class.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 function PLUGINSS_DB() {
 

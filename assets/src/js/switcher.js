@@ -8,14 +8,14 @@ var PluginSS_Switcher;
         /**
          * jQuery objects for elements.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          */
         elements: {},
 
         /**
          * Initialize the object.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          */
         init: function () {
 
@@ -32,7 +32,7 @@ var PluginSS_Switcher;
         /**
          * Gets elements.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          *
          * @returns {boolean}
          */
@@ -63,7 +63,7 @@ var PluginSS_Switcher;
         /**
          * Sets up event handlers.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          */
         setup_handlers: function () {
 
@@ -77,7 +77,7 @@ var PluginSS_Switcher;
         /**
          * Fires in pressing a key within the add state text field.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          *
          * @param e
          */
@@ -93,7 +93,7 @@ var PluginSS_Switcher;
         /**
          * Saves a state.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          */
         save_state: function (e) {
 
@@ -149,7 +149,7 @@ var PluginSS_Switcher;
         /**
          * Deletes the current state.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          */
         delete_state: function () {
 
@@ -200,7 +200,7 @@ var PluginSS_Switcher;
         /**
          * Fires when changing the load state selector.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          */
         change_state_selector: function () {
 
@@ -210,7 +210,7 @@ var PluginSS_Switcher;
         /**
          * Sets the form to loading.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          */
         set_loading: function () {
 
@@ -224,7 +224,7 @@ var PluginSS_Switcher;
         /**
          * Unsets the form from loading.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          */
         unset_loading: function () {
 
@@ -239,7 +239,7 @@ var PluginSS_Switcher;
         /**
          * Hides/shows part of the form based on the conditions.
          *
-         * @since {{VERSION}}
+         * @since 1.0.0
          */
         set_form_display: function () {
 

@@ -2,16 +2,17 @@
 /**
  * Plugin Name: Plugin State Switcher
  * Description: Helps quickly switching between plugin sets.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Joel Worsham
  * Author URI: http://realbigmarketing.com
+ * Text Domain: pluginss
  */
 
 defined( 'ABSPATH' ) || die;
 
 if ( ! class_exists( 'PluginSS' ) ) {
 
-	define( 'PLUGINSS_VERSION', '1.0.0' );
+	define( 'PLUGINSS_VERSION', '1.0.1' );
 	define( 'PLUGINSS_DIR', plugin_dir_path( __FILE__ ) );
 	define( 'PLUGINSS_URI', plugins_url( '', __FILE__ ) );
 
@@ -20,14 +21,14 @@ if ( ! class_exists( 'PluginSS' ) ) {
 	 *
 	 * The main plugin class.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	final class PluginSS {
 
 		/**
 		 * Database functions.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 *
 		 * @var PluginSS_DB
 		 */
@@ -36,7 +37,7 @@ if ( ! class_exists( 'PluginSS' ) ) {
 		/**
 		 * Loads the switcher.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 *
 		 * @var PluginSS_Switcher
 		 */
@@ -51,7 +52,7 @@ if ( ! class_exists( 'PluginSS' ) ) {
 		/**
 		 * Call this method to get singleton
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 *
 		 * @return PluginSS()
 		 */
@@ -70,7 +71,7 @@ if ( ! class_exists( 'PluginSS' ) ) {
 		/**
 		 * PluginSS constructor.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		function __construct() {
 
@@ -83,7 +84,7 @@ if ( ! class_exists( 'PluginSS' ) ) {
 		/**
 		 * Requires and loads required files.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 * @access private
 		 */
 		private function require_necessities() {
@@ -99,7 +100,7 @@ if ( ! class_exists( 'PluginSS' ) ) {
 		/**
 		 * Registers plugin assets.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 * @access private
 		 */
 		function register_assets() {
@@ -128,7 +129,7 @@ if ( ! class_exists( 'PluginSS' ) ) {
 		/**
 		 * Enqueues plugin assets.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 * @access private
 		 */
 		function enqueue_assets() {
@@ -150,7 +151,7 @@ if ( ! class_exists( 'PluginSS' ) ) {
 	/**
 	 * Gets/loads the main plugin class.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 *
 	 * @return PluginSS
 	 */

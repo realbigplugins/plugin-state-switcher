@@ -1,13 +1,13 @@
 {
-  "name": "LearnDash_Gradebook",
-  "version": "1.1.0",
+  "name": "PluginStateSwitcher",
+  "version": "1.0.1",
   "authors": [
-    "Real Big Marketing <joel@realbigmarketing.com>"
+    "Joel Worsham <joel@realbigmarketing.com>"
   ],
-  "description": "Adds Gradebook functionality to LearnDash LMS.",
+  "description": "Helps quickly switching between plugin sets.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/realbigplugins/learndash-gradebook.git"
+    "url": "https://github.com/realbigplugins/plugin-state-switcher.git"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

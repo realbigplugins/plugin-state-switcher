@@ -4,7 +4,7 @@
  *
  * Makes sure everything is good to go for loading the plugin, and then loads it.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 
 defined( 'ABSPATH' ) || die;
@@ -16,14 +16,14 @@ defined( 'ABSPATH' ) || die;
  *
  * Makes sure everything is good to go for loading the plugin, and then loads it.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 class PluginSS_BootStrapper {
 
 	/**
 	 * Notices to show if cannot load.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 *
 	 * @var array
@@ -33,7 +33,7 @@ class PluginSS_BootStrapper {
 	/**
 	 * PluginSS_BootStrapper constructor.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	function __construct() {
 
@@ -43,7 +43,7 @@ class PluginSS_BootStrapper {
 	/**
 	 * Maybe loads the plugin.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 */
 	function maybe_load() {
@@ -109,7 +109,7 @@ class PluginSS_BootStrapper {
 	/**
 	 * Loads the plugin.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 */
 	private function load() {
@@ -120,7 +120,7 @@ class PluginSS_BootStrapper {
 	/**
 	 * Shows notices on failure to load.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 */
 	function notices() {

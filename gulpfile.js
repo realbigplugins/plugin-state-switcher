@@ -54,11 +54,10 @@ gulp.task('generate_pot', function () {
     return gulp.src('./**/*.php')
         .pipe($.sort())
         .pipe($.wpPot({
-            domain: 'learndash-gradebook',
-            destFile: 'learndash-gradebook.pot',
-            package: 'LearnDash_Gradebook',
+            domain: 'pluginss',
+            package: 'PluginStateSwitcher',
         }))
-        .pipe(gulp.dest('./languages/'));
+        .pipe(gulp.dest('./languages/pluginss.pot'));
 });
 
 gulp.task('default', ['sass', 'scripts'], function () {

@@ -2,7 +2,7 @@
 /**
  * HTML for the switcher notices.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  *
  * @var array $notices Notices to show.
  */

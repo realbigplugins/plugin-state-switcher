@@ -2,7 +2,7 @@
 /**
  * Installs the plugin.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 
 defined( 'ABSPATH' ) || die;
@@ -12,14 +12,14 @@ defined( 'ABSPATH' ) || die;
  *
  * Installs the plugin.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 class PluginSS_Install {
 
 	/**
 	 * Loads the install functions.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	static function install() {
 
@@ -31,7 +31,7 @@ class PluginSS_Install {
 	/**
 	 * Sets up the tables.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 *
 	 * @global wpdb $wpdb

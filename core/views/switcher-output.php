@@ -2,7 +2,7 @@
 /**
  * HTML for the switcher.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  *
  * @var array $states Saved states.
  * @var int|false $active_state The currently active state.

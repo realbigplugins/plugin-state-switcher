@@ -2,7 +2,7 @@
 /**
  * Loads the switcher.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 
 defined( 'ABSPATH' ) || die;
@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || die;
 /**
  * Loads the switcher.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 class PluginSS_Switcher {
 
 	/**
 	 * PluginSS_Switcher constructor.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 */
 	function __construct() {
 
@@ -30,7 +30,7 @@ class PluginSS_Switcher {
 	/**
 	 * Loads a state.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 */
 	function load_state() {
@@ -72,7 +72,7 @@ class PluginSS_Switcher {
 		/**
 		 * Filters the switcher notices.
 		 *
-		 * @since {{VERSION}}
+		 * @since 1.0.0
 		 */
 		$notices = apply_filters( 'pluginss_switcher_notices', get_transient( 'pluginss_switcher_notices' ) );
 
@@ -83,7 +83,7 @@ class PluginSS_Switcher {
 	/**
 	 * Adds a state from AJAX.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 */
 	function ajax_add_state() {
@@ -127,7 +127,7 @@ class PluginSS_Switcher {
 	/**
 	 * Deletes a state from AJAX.
 	 *
-	 * @since {{VERSION}}
+	 * @since 1.0.0
 	 * @access private
 	 */
 	function ajax_delete_state() {

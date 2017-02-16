@@ -2,7 +2,7 @@
 /**
  * Helper functions.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 
 defined( 'ABSPATH' ) || die;
@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || die;
 /**
  * Gets the currently active state, if any.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  */
 function pluginss_get_currently_active_state() {
 
@@ -29,7 +29,7 @@ function pluginss_get_currently_active_state() {
 /**
  * Gets active plugins, minus self.
  *
- * @since {{VERSION}}
+ * @since 1.0.0
  *
  * @return false|array
  */

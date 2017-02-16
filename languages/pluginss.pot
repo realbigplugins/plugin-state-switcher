@@ -1,0 +1,66 @@
+# Copyright (C) 2017 PluginStateSwitcher
+# This file is distributed under the same license as the PluginStateSwitcher package.
+msgid ""
+msgstr ""
+"Project-Id-Version: PluginStateSwitcher\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: plugin-state-switcher-bootstrapper.php:82
+msgid "Minimum PHP version of %s required. Current version is %s. Please contact your system administrator to upgrade PHP to its latest version."
+msgstr ""
+
+#: plugin-state-switcher-bootstrapper.php:92
+msgid "Minimum WordPress version of %s required. Current version is %s. Please contact your system administrator to upgrade WordPress to its latest version."
+msgstr ""
+
+#: plugin-state-switcher-bootstrapper.php:132
+msgid "%sPlugin State Switcher%s could not load because of the following errors:"
+msgstr ""
+
+#: core/class-pluginss-switcher.php:109
+msgid "Successfully added new state \"%s\" with current active plugins!"
+msgstr ""
+
+#: core/class-pluginss-switcher.php:114, core/views/switcher-output.php:36
+msgid "%s - Active"
+msgstr ""
+
+#: core/class-pluginss-switcher.php:122
+msgid "Could not add new state."
+msgstr ""
+
+#: core/class-pluginss-switcher.php:142
+msgid "Successfully deleted state!"
+msgstr ""
+
+#: core/class-pluginss-switcher.php:148
+msgid "Could not delete state."
+msgstr ""
+
+#: core/views/switcher-output.php:17
+msgid "Plugin States"
+msgstr ""
+
+#: core/views/switcher-output.php:51
+msgid "Load State"
+msgstr ""
+
+#: core/views/switcher-output.php:55
+msgid "Delete State"
+msgstr ""
+
+#: core/views/switcher-output.php:62
+msgid "New state name"
+msgstr ""
+
+#: core/views/switcher-output.php:65
+msgid "Add New State"
+msgstr ""
