@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Plugin State Switcher
  * Description: Helps quickly switching between plugin sets.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Joel Worsham
  * Author URI: http://realbigmarketing.com
  * Text Domain: pluginss
@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || die;
 
 if ( ! class_exists( 'PluginSS' ) ) {
 
-	define( 'PLUGINSS_VERSION', '1.0.1' );
+	define( 'PLUGINSS_VERSION', '1.0.2' );
 	define( 'PLUGINSS_DIR', plugin_dir_path( __FILE__ ) );
 	define( 'PLUGINSS_URI', plugins_url( '', __FILE__ ) );
 

@@ -52,10 +52,13 @@ class PluginSS_Switcher {
 			return;
 		}
 
-		// Add self
-		$state->active[] = basename( PLUGINSS_DIR ) . '/plugin-state-switcher.php';
+		// Get current plugins, sans self
+		$current = get_option( 'active_plugins' );
+		unset( $current[ array_search( basename( PLUGINSS_DIR ) . '/plugin-state-switcher.php', $current)]);
 
-		update_option( 'active_plugins', $state->active );
+		// Deactivate current set and then activate new set
+		deactivate_plugins( $current );
+		activate_plugins( $state->active );
 
 		wp_redirect( admin_url( 'plugins.php' ) );
 		exit();
