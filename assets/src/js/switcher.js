@@ -3,6 +3,8 @@ var PluginSS_Switcher;
 (function ($) {
     'use strict';
 
+    var l10n = PluginSS_Data['l10n'] || {};
+
     var api = PluginSS_Switcher = {
 
         /**
@@ -152,6 +154,11 @@ var PluginSS_Switcher;
          * @since 1.0.0
          */
         delete_state: function () {
+
+            if (!confirm(l10n['delete_state_confirm'])) {
+
+                return;
+            }
 
             var current_state = api.elements.field_state.find('option:selected').val();
 

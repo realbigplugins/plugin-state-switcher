@@ -35,14 +35,14 @@ class PluginSS_Switcher {
 	 */
 	function load_state() {
 
-		if ( ! isset( $_POST['pluginss_nonce'] ) ||
-		     ! wp_verify_nonce( $_POST['pluginss_nonce'], 'load_state' )
+		if ( ! isset( $_REQUEST['pluginss_nonce'] ) ||
+		     ! wp_verify_nonce( $_REQUEST['pluginss_nonce'], 'load_state' )
 		) {
 
 			return;
 		}
 
-		if ( ! ( $state_ID = $_POST['state_selector'] ) ) {
+		if ( ! ( $state_ID = $_REQUEST['state_selector'] ) ) {
 
 			return;
 		}
@@ -52,15 +52,34 @@ class PluginSS_Switcher {
 			return;
 		}
 
-		// Get current plugins, sans self
-		$current = get_option( 'active_plugins' );
-		unset( $current[ array_search( basename( PLUGINSS_DIR ) . '/plugin-state-switcher.php', $current)]);
+		switch ( $_REQUEST['pluginss_action'] ) {
 
-		// Deactivate current set and then activate new set
-		deactivate_plugins( $current );
-		activate_plugins( $state->active );
+			case 'deactivate':
 
-		wp_redirect( admin_url( 'plugins.php' ) );
+				// Get current plugins, sans self
+				$current = get_option( 'active_plugins' );
+				unset( $current[ array_search( basename( PLUGINSS_DIR ) . '/plugin-state-switcher.php', $current ) ] );
+
+				// Deactivate current set and then activate new set
+				deactivate_plugins( $current );
+				wp_redirect( add_query_arg(
+					array(
+						'pluginss_action' => 'activate',
+						'pluginss_nonce'  => $_REQUEST['pluginss_nonce'],
+						'state_selector'  => $state_ID,
+					),
+					admin_url( 'plugins.php' )
+				) );
+
+				break;
+
+			case 'activate':
+
+				activate_plugins( $state->active );
+				wp_redirect( admin_url( 'plugins.php' ) );
+				break;
+		}
+
 		exit();
 	}
 
@@ -109,12 +128,12 @@ class PluginSS_Switcher {
 
 			wp_send_json_success( array(
 				'message' => sprintf(
-					__( 'Successfully added new state "%s" with current active plugins!', 'pluginss' ),
+					__( 'Successfully added new state "%s" with current active plugins!', 'plugin-state-switcher' ),
 					"<strong>$state_name</strong>"
 				),
 				'id'      => $ID,
 				'name'    => sprintf(
-					__( '%s - Active', 'pluginss' ),
+					__( '%s - Active', 'plugin-state-switcher' ),
 					$state_name
 				),
 			) );
@@ -122,7 +141,7 @@ class PluginSS_Switcher {
 		} else {
 
 			wp_send_json_error( array(
-				'message' => __( 'Could not add new state.', 'pluginss' ),
+				'message' => __( 'Could not add new state.', 'plugin-state-switcher' ),
 			) );
 		}
 	}
@@ -142,13 +161,13 @@ class PluginSS_Switcher {
 		if ( PLUGINSS_DB()->delete_state( $state_ID ) ) {
 
 			wp_send_json_success( array(
-				'message' => __( 'Successfully deleted state!', 'pluginss' ),
+				'message' => __( 'Successfully deleted state!', 'plugin-state-switcher' ),
 			) );
 
 		} else {
 
 			wp_send_json_error( array(
-				'message' => __( 'Could not delete state.', 'pluginss' ),
+				'message' => __( 'Could not delete state.', 'plugin-state-switcher' ),
 			) );
 		}
 	}

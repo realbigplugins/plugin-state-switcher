@@ -5,7 +5,7 @@
  * Version: 1.0.2
  * Author: Joel Worsham
  * Author URI: http://realbigmarketing.com
- * Text Domain: pluginss
+ * Text Domain: plugin-state-switcher
  */
 
 defined( 'ABSPATH' ) || die;
@@ -123,6 +123,10 @@ if ( ! class_exists( 'PluginSS' ) ) {
 			wp_localize_script( 'plugin-state-switcher', 'PluginSS_Data', array(
 				'nonce'        => wp_create_nonce( 'pluginss_nonce' ),
 				'active_state' => pluginss_get_currently_active_state(),
+				'l10n'         => array(
+					'delete_state_confirm' => __( 'Are you sure you want to delete this state? This cannot be undone',
+						'plugin-state-switcher' ),
+				)
 			) );
 		}
 

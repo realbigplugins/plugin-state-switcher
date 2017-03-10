@@ -14,12 +14,14 @@ defined( 'ABSPATH' ) || die();
 <div id="pluginss-container">
 
 	<p class="pluginss-switcher-title">
-		<?php _e( 'Plugin States', 'pluginss' ); ?>
+		<?php _e( 'Plugin States', 'plugin-state-switcher' ); ?>
 	</p>
 
 	<form method="post" class="pluginss-form">
 
 		<?php wp_nonce_field( 'load_state', 'pluginss_nonce' ); ?>
+
+		<input type="hidden" name="pluginss_action" value="deactivate" />
 
 		<fieldset class="pluginss-manage-states">
 
@@ -33,7 +35,7 @@ defined( 'ABSPATH' ) || die();
 						if ( $active_state == $state->id ) {
 
 							printf(
-								__( '%s - Active', 'pluginss' ),
+								__( '%s - Active', 'plugin-state-switcher' ),
 								$state->name
 							);
 
@@ -48,21 +50,21 @@ defined( 'ABSPATH' ) || die();
 			</select>
 
 			<button type="submit" class="button" name="load_state">
-				<?php _e( 'Load State', 'pluginss' ); ?>
+				<?php _e( 'Load State', 'plugin-state-switcher' ); ?>
 			</button>
 
 			<button type="button" class="button pluginss-delete-state" name="delete_state">
-				<?php _e( 'Delete State', 'pluginss' ); ?>
+				<?php _e( 'Delete State', 'plugin-state-switcher' ); ?>
 			</button>
 
 		</fieldset>
 
 		<fieldset class="pluginss-add-state">
 
-			<input type="text" name="state_name" placeholder="<?php _e( 'New state name', 'pluginss' ); ?>"/>
+			<input type="text" name="state_name" placeholder="<?php _e( 'New state name', 'plugin-state-switcher' ); ?>"/>
 
 			<button type="button" class="button button-primary" name="add_state">
-				<?php _e( 'Add New State', 'pluginss' ); ?>
+				<?php _e( 'Add New State', 'plugin-state-switcher' ); ?>
 			</button>
 
 		</fieldset>

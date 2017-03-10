@@ -79,7 +79,7 @@ class PluginSS_BootStrapper {
 		if ( version_compare( $php_version, $php_min_version ) === - 1 ) {
 
 			$this->notices[] = sprintf(
-				__( 'Minimum PHP version of %s required. Current version is %s. Please contact your system administrator to upgrade PHP to its latest version.', 'pluginss' ),
+				__( 'Minimum PHP version of %s required. Current version is %s. Please contact your system administrator to upgrade PHP to its latest version.', 'plugin-state-switcher' ),
 				$php_min_version,
 				$php_version
 			);
@@ -89,7 +89,7 @@ class PluginSS_BootStrapper {
 		if ( version_compare( $wp_version, $wp_min_version ) === - 1 ) {
 
 			$this->notices[] = sprintf(
-				__( 'Minimum WordPress version of %s required. Current version is %s. Please contact your system administrator to upgrade WordPress to its latest version.', 'pluginss' ),
+				__( 'Minimum WordPress version of %s required. Current version is %s. Please contact your system administrator to upgrade WordPress to its latest version.', 'plugin-state-switcher' ),
 				$wp_min_version,
 				$wp_version
 			);
@@ -129,7 +129,7 @@ class PluginSS_BootStrapper {
 			<p>
 				<?php
 				printf(
-					__( '%sPlugin State Switcher%s could not load because of the following errors:', 'pluginss' ),
+					__( '%sPlugin State Switcher%s could not load because of the following errors:', 'plugin-state-switcher' ),
 					'<strong>',
 					'</strong>'
 				);
